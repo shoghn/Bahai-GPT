@@ -35,21 +35,23 @@ if "chat" not in st.session_state:
 
 if "history" not in st.session_state:
     st.session_state.history=[]
-    with st.chat_message(name="assistant", avatar="📜"):
-        first_messsage="Allah'U'Abha, weclome to Baha'i-GPT. How can I help you today?"
-        st.write(first_messsage)
+    first_messsage="Allah'U'Abha, weclome to Baha'i-GPT. How can I help you today?"
     st.session_state.history.append({"role":"assistant","content":first_messsage})
 for message in st.session_state.history:
-    with st.chat_message(message["role"]):
-        st.write(message["content"])#maybe use .markdown() insetad
+    if message["role"]=="assistant":
+        av="📜"
+    else:
+        av=None
+    with st.chat_message(message["role"],avatar=av):
+        st.markdown(message["content"])#maybe use .markdown() insetad
 
 if prompt:=st.chat_input("Type your question here"):
     #user
     with st.chat_message("user"):
-        st.write(prompt)#maybe use .markdown() insetad
+        st.markdown(prompt)#maybe use .markdown() insetad
     st.session_state.history.append({"role":"user","content":prompt})#maybe use .append() instead of +=
     #B-GPT
-    with st.chat_message(name="assistant",avatar="📜"):
+    with st.chat_message("assistant"):
         message_holder=st.empty()
         full_response=""
         response = st.session_state.chat.send_message_stream(prompt,config=generate_content_config)
@@ -57,5 +59,5 @@ if prompt:=st.chat_input("Type your question here"):
             #print(chunk.text, end="",flush=True)
             flush=True
             full_response+=chunk.text
-            message_holder.write(full_response)#maybe use .markdown() insetad
+            message_holder.markdown(full_response)#maybe use .markdown() insetad
     st.session_state.history.append({"role":"assistant","content":full_response})#maybe use .append() instead of +=
