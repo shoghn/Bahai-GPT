@@ -51,7 +51,7 @@ if prompt:=st.chat_input("Type your question here"):
         st.markdown(prompt)#maybe use .markdown() instead
     st.session_state.history.append({"role":"user","content":prompt})#maybe use .append() instead of +=
     #B-GPT
-    with st.chat_message("assistant"):
+    with st.chat_message(name="assistant",avatar=av):
         message_holder=st.empty()
         full_response=""
         response = st.session_state.chat.send_message_stream(prompt,config=generate_content_config)
