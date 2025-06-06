@@ -28,7 +28,7 @@ generate_content_config = types.GenerateContentConfig(
 
 st.title("Baha'i-GPT")
 
-
+image="https://media.bahai.org/icons/icon-512x512.png?w=1200&h=630&q=70&fit=fillmax&fill=blur&fm=pjpg"
 
 if "chat" not in st.session_state:
     st.session_state.chat=client.chats.create(model=MODEL)
@@ -39,7 +39,7 @@ if "history" not in st.session_state:
     st.session_state.history.append({"role":"assistant","content":first_messsage})
 for message in st.session_state.history:
     if message["role"]=="assistant":
-        av="👾"
+        av=image
     else:
         av=None
     with st.chat_message(message["role"],avatar=av):
