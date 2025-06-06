@@ -37,7 +37,8 @@ if "history" not in st.session_state:
     st.session_state.history=[]
     with st.chat_message(name="assistant", avatar="📜"):
         first_messsage="Allah'U'Abha, weclome to Baha'i-GPT. How can I help you today?"
-        st.session_state.history.append({"role":"assistant","content":first_messsage})
+        st.write(first_messsage)
+    st.session_state.history.append({"role":"assistant","content":first_messsage})
 for message in st.session_state.history:
     with st.chat_message(message["role"]):
         st.write(message["content"])#maybe use .markdown() insetad
