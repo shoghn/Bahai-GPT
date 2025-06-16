@@ -23,7 +23,8 @@ generate_content_config = types.GenerateContentConfig(
                                  to the topic. Try to source information and provide direct quotes from 
                                  bahai.org, https://www.bahai.org/library/, and https://www.bahai.org/library/authoritative-texts/. 
                                  If you're not able to find the information on these sites then feel free to search elsewhere.
-                                 Explicitly reference where you get information from in each answer (especially for quotes)."""),
+                                 Explicitly reference the name of the website (not the link) where you get information from in 
+                                 each answer (especially for quotes)."""),
         ],
     )
 
