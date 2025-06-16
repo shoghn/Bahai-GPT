@@ -49,7 +49,7 @@ for message in st.session_state.history:
 
 if prompt:=st.chat_input("Type your question here"):
     #user
-    with st.chat_message("user"):
+    with st.chat_message("user",avatar=av):
         st.markdown(prompt)#maybe use .markdown() instead
     st.session_state.history.append({"role":"user","content":prompt})#maybe use .append() instead of +=
     #B-GPT
