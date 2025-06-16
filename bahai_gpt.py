@@ -43,7 +43,7 @@ for message in st.session_state.history:
     if message["role"]=="assistant":
         av=image
     else:
-        av=None
+        av="🪞"
     with st.chat_message(message["role"],avatar=av):
         st.markdown(message["content"])#maybe use .markdown() instead
 
