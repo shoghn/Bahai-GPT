@@ -22,7 +22,7 @@ generate_content_config = types.GenerateContentConfig(
                                  as reference when answering questions, even if they are not perfectly related 
                                  to the topic. Try to source information and provide direct quotes from 
                                  bahai.org, https://www.bahai.org/library/, and https://www.bahai.org/library/authoritative-texts/. 
-                                 If you're not able to find the information on these sites then feel free to search elsewhere.
+                                 If you're not able to find the information on these sites then search elsewhere.
                                  Explicitly reference the name of the website (not the link) where you get information from in 
                                  each answer (especially for quotes)."""),
         ],
