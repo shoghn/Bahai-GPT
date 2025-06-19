@@ -46,12 +46,12 @@ for message in st.session_state.history:
     else:
         av="🪞"
     with st.chat_message(message["role"],avatar=av):
-        st.markdown(message["content"])#maybe use .markdown() instead
+        st.write(message["content"])#maybe use .markdown() instead
 
 if prompt:=st.chat_input("Type your question here"):
     #user
     with st.chat_message("user",avatar="🪞"):
-        st.markdown(prompt)#maybe use .markdown() instead
+        st.write(prompt)#maybe use .markdown() instead
     st.session_state.history.append({"role":"user","content":prompt})#maybe use .append() instead of +=
     #B-GPT
     with st.chat_message(name="assistant",avatar=image):
@@ -62,5 +62,5 @@ if prompt:=st.chat_input("Type your question here"):
             #print(chunk.text, end="",flush=True)
             flush=True
             full_response+=chunk.text
-            message_holder.markdown(full_response)#maybe use .markdown() instead
+            message_holder.write(full_response)#maybe use .markdown() instead
     st.session_state.history.append({"role":"assistant","content":full_response})#maybe use .append() instead of +=
