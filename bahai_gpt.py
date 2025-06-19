@@ -62,5 +62,6 @@ if prompt:=st.chat_input("Type your question here"):
             #print(chunk.text, end="",flush=True)
             flush=True
             full_response+=chunk.text
+            full_response=full_response("`","\\`")
             message_holder.write(full_response)#maybe use .markdown() instead
     st.session_state.history.append({"role":"assistant","content":full_response})#maybe use .append() instead of +=
