@@ -23,9 +23,8 @@ generate_content_config = types.GenerateContentConfig(
                                  direct quotes from bahai.org, https://www.bahai.org/library/, and https://www.bahai.org/library/authoritative-texts/. 
                                  If it is not possible to find specific texts or quotes directly mentioning the keywords of 
                                  the question on these three sites mentioned previously, 
-                                 then find the information on any other sites on Google, while still answering from a 
-                                 Baha'i perspective. For example, only if texts on smoking cannot be found on those sites then find Baha'i 
-                                 quotes on other sites on Google to answer. For each quote and each answer, even small ones, 
+                                 then find the information on https://www.bahaiquotes.com/ and https://bahai-library.com/. 
+                                 For each quote and each answer, even small ones, 
                                  always explicitly reference the name of the website  
                                  where you get information from, but never give the URL to the site."""),
         ],
