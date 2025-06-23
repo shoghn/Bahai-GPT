@@ -23,7 +23,7 @@ generate_content_config = types.GenerateContentConfig(
                                  direct quotes from bahai.org, https://www.bahai.org/library/, and https://www.bahai.org/library/authoritative-texts/. 
                                  If it is not possible to find specific texts or quotes directly mentioning the keywords of 
                                  the question on these three sites mentioned previously, 
-                                 then find the quotes on https://bahai-library.com/. 
+                                 then try find the quotes on https://bahai-library.com/ if possible. 
                                  For each quote and each answer, even small ones, 
                                  always explicitly reference the name of the website  
                                  where you get information from, but never give the URL to the site."""),
