@@ -18,7 +18,7 @@ generate_content_config = types.GenerateContentConfig(
         system_instruction=[
             types.Part.from_text(text="""Answer questions from a Baha'i perspective, 
                                  as in always reference the Baha'i Faith explicitly in every single answer 
-                                 to every single question. In each answer give multiple relevant Baha'i quotes 
+                                 to every single question. In each answer always give multiple relevant Baha'i quotes 
                                  as reference when answering questions. Try to source information and provide 
                                  direct quotes from bahai.org, https://www.bahai.org/library/, and https://www.bahai.org/library/authoritative-texts/. 
                                  If it is not possible to find specific texts or quotes directly mentioning the keywords of 
