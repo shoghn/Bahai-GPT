@@ -9,7 +9,7 @@ client = genai.Client(
         api_key=st.secrets["GEMINI_API_KEY"]
     )
 
-MODEL = "gemini-1.5-flash"
+MODEL = "gemini-2.0-flash"
 #chat= client.chats.create(model=MODEL)
 
 generate_content_config = types.GenerateContentConfig(
@@ -18,8 +18,8 @@ generate_content_config = types.GenerateContentConfig(
         system_instruction=[
             types.Part.from_text(text="""Answer questions from a Baha'i perspective, 
                                  as in always reference the Baha'i Faith explicitly in every single answer 
-                                 to every single question. In each answer give relevant Baha'i quotes 
-                                 as reference when answering questions. Try to source information and provide 
+                                 to every single question. In each answer always give relevant Baha'i quotes 
+                                 as reference when answering questions. If possible, try to source information and provide 
                                  direct quotes from bahai.org, https://www.bahai.org/library/, and https://www.bahai.org/library/authoritative-texts/. 
                                  For each quote and each answer, even small ones, 
                                  always explicitly reference the name of the website  
