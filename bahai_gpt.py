@@ -24,8 +24,8 @@ generate_content_config = types.GenerateContentConfig(
                                  If it is not possible to find specific texts or quotes directly mentioning the keywords of 
                                  the question on these three sites mentioned previously, 
                                  then find the information on any other sites on Google, while still answering from a 
-                                 Baha'i perspective. For example, if texts on smoking cannot be found on those sites then find Baha'i 
-                                 quotes on other sites on Google. For each quote and each answer, even small ones, 
+                                 Baha'i perspective. For example, only if texts on smoking cannot be found on those sites then find Baha'i 
+                                 quotes on other sites on Google to answer. For each quote and each answer, even small ones, 
                                  always explicitly reference the name of the website  
                                  where you get information from, but never give the URL to the site."""),
         ],
