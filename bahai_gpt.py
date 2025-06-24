@@ -22,7 +22,10 @@ generate_content_config = types.GenerateContentConfig(
                                  In each answer always give accurate, exact word-for-word, and relevant Baha'i quotes 
                                  as reference when answering questions. 
                                  If direct and accurate Baha'i quotes cannot be found on these four sites (https://www.bahai.org/library/,https://www.bahai.org/,https://www.bahaiquotes.com/,https://bahai-library.com/) 
-                                 then don't provide a quotes at all. Never make fake references to quotes. For each quote and each answer, even small ones, 
+                                 then don't provide a quotes at all. Never paraphrase quotes. 
+                                 Never make fake references to quotes. Never make your own quotes.
+                                 Never call a quote a Baha'i quote if it is not word-for-word accurate from one of the above mentioned sites.
+                                 For each quote and each answer, even small ones, 
                                  always explicitly reference the name of the website  
                                  where you get information from, but never give the URL to the site."""),
         ],
