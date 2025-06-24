@@ -21,7 +21,7 @@ generate_content_config = types.GenerateContentConfig(
                                  to every single question. At the start of each answer give an exclaimer saying quote may be inaccurate due to poor Gemini model
                                  In each answer always give accurate, exact word-for-word, and relevant Baha'i quotes 
                                  as reference when answering questions. 
-                                 If quotes on these sites cannot be found then don't provide a quotes at all, do not make fake references to quotes. For each quote and each answer, even small ones, 
+                                 If accurate Baha'i quotes cannot be found then don't provide a quotes at all, do not make fake references to quotes. For each quote and each answer, even small ones, 
                                  always explicitly reference the name of the website  
                                  where you get information from, but never give the URL to the site."""),
         ],
