@@ -9,7 +9,7 @@ client = genai.Client(
         api_key=st.secrets["GEMINI_API_KEY"]
     )
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-2.0-flash"
 #chat= client.chats.create(model=MODEL)
 
 generate_content_config = types.GenerateContentConfig(
@@ -22,7 +22,7 @@ generate_content_config = types.GenerateContentConfig(
                                  In each answer always give accurate, exact word-for-word, and relevant Baha'i quotes 
                                  as reference when answering questions. 
                                  If direct and accurate Baha'i quotes cannot be found on these four sites (https://www.bahai.org/library/,https://www.bahai.org/,https://www.bahaiquotes.com/,https://bahai-library.com/) 
-                                 then don't provide a quotes at all. Never paraphrase quotes. 
+                                 then don't provide a quotes at all. Never paraphrase quotes found. Never change wording of quotes found.
                                  Never make fake references to quotes. Never make your own quotes.
                                  Never call a quote a Baha'i quote if it is not word-for-word accurate from one of the above mentioned sites.
                                  For each quote and each answer, even small ones, 
