@@ -29,7 +29,7 @@ generate_content_config = types.GenerateContentConfig(
                                  inaccurate due to poor Gemini model.
                                  Provide relevant Baha'i quotes in each answer.
                                  Try to get your information and quotes from these four sites: https://www.bahai.org/library/, bahai.org, https://www.bahaiquotes.com/,https://bahai-library.com/ .
-                                 For each quote give the name of the website where you got the quote from as reference."""),
+                                 For each quote give URL of the website where you got the quote from as reference."""),
         ],
     )
 
