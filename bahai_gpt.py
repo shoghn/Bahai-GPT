@@ -21,7 +21,7 @@ MODEL = "gemini-1.5-flash"
 generate_content_config = types.GenerateContentConfig(
         temperature=0,
         response_mime_type="text/plain",
-        #tools=[grounding_tool],
+        tools=[grounding_tool],
         system_instruction=[
             types.Part.from_text(text="""Answer questions from a Baha'i perspective, 
                                  as in always reference the Baha'i Faith explicitly in every single answer 
