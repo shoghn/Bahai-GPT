@@ -9,12 +9,19 @@ client = genai.Client(
         api_key=st.secrets["GEMINI_API_KEY"]
     )
 
+# Define the grounding tool
+grounding_tool = types.Tool(
+    google_search=types.GoogleSearch()
+)
+
+#Define model
 MODEL = "gemini-2.0-flash"
 #chat= client.chats.create(model=MODEL)
 
 generate_content_config = types.GenerateContentConfig(
         temperature=0,
         response_mime_type="text/plain",
+        tools=[grounding_tool],
         system_instruction=[
             types.Part.from_text(text="""Answer questions from a Baha'i perspective, 
                                  as in always reference the Baha'i Faith explicitly in every single answer 
@@ -22,6 +29,7 @@ generate_content_config = types.GenerateContentConfig(
                                  Never provide any quotes."""),
         ],
     )
+
 #Add after adding RAG
 '''
 Never paraphrase quotes. Never change wording of quotes found.
