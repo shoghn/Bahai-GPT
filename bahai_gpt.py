@@ -19,11 +19,14 @@ generate_content_config = types.GenerateContentConfig(
             types.Part.from_text(text="""Answer questions from a Baha'i perspective, 
                                  as in always reference the Baha'i Faith explicitly in every single answer 
                                  to every single question. At the start of each answer give an exclaimer saying quote may be inaccurate due to poor Gemini model
-                                 Never provide any quotes.
-                                 Never paraphrase quotes. Never change wording of quotes found.
-                                 Never make fake references to quotes. Never make your own quotes."""),
+                                 Never provide any quotes."""),
         ],
     )
+#Add after adding RAG
+'''
+Never paraphrase quotes. Never change wording of quotes found.
+                                 Never make fake references to quotes. Never make your own quotes.
+'''
 
 
 st.title("Baha'i-GPT")
