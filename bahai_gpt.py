@@ -9,7 +9,7 @@ client = genai.Client(
         api_key=st.secrets["GEMINI_API_KEY"]
     )
 
-MODEL = "gemini-1.5-flash"
+MODEL = "gemini-2.0-flash"
 #chat= client.chats.create(model=MODEL)
 
 generate_content_config = types.GenerateContentConfig(
@@ -19,14 +19,9 @@ generate_content_config = types.GenerateContentConfig(
             types.Part.from_text(text="""Answer questions from a Baha'i perspective, 
                                  as in always reference the Baha'i Faith explicitly in every single answer 
                                  to every single question. At the start of each answer give an exclaimer saying quote may be inaccurate due to poor Gemini model
-                                 In each answer try to give accurate, exact word-for-word, and relevant Baha'i quotes 
-                                 as reference when answering questions. 
+                                 Never provide any quotes.
                                  Never paraphrase quotes. Never change wording of quotes found.
-                                 Never make fake references to quotes. Never make your own quotes.
-                                 Never call a quote a Baha'i quote if it is not word-for-word accurate from a Baha'i source.
-                                 For each quote and each answer, even small ones, 
-                                 always explicitly reference  
-                                 where you get information from, but never give the URL to a site."""),
+                                 Never make fake references to quotes. Never make your own quotes."""),
         ],
     )
 
