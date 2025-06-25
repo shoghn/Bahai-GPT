@@ -31,10 +31,10 @@ generate_content_config = types.GenerateContentConfig(
     )
 
 #Add after adding RAG
-'''
-Never paraphrase quotes. Never change wording of quotes found.
-                                 Never make fake references to quotes. Never make your own quotes.
-'''
+
+#Never paraphrase quotes. Never change wording of quotes found.
+#                                 Never make fake references to quotes. Never make your own quotes.
+
 
 
 st.title("Baha'i-GPT")
