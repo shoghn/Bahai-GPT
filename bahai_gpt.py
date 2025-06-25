@@ -9,7 +9,7 @@ client = genai.Client(
         api_key=st.secrets["GEMINI_API_KEY"]
     )
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-2.0-flash"
 #chat= client.chats.create(model=MODEL)
 
 generate_content_config = types.GenerateContentConfig(
