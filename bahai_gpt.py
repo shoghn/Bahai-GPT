@@ -26,7 +26,7 @@ generate_content_config = types.GenerateContentConfig(
             types.Part.from_text(text="""Answer questions from a Baha'i perspective, 
                                  as in always reference the Baha'i Faith explicitly in every single answer 
                                  to every single question. At the start of each answer give an exclaimer saying quote may be inaccurate due to poor Gemini model
-                                 Never provide any quotes."""),
+                                 Provide Baha'i quotes in each answer, and give the URL where you got the quote from as reference."""),
         ],
     )
 
