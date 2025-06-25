@@ -28,8 +28,7 @@ generate_content_config = types.GenerateContentConfig(
                                  to every single question. At the start of each answer give an exclaimer saying quote may be 
                                  inaccurate due to poor Gemini model.
                                  Try to get your information and quotes from these four sites: https://www.bahai.org/library/, bahai.org, https://www.bahaiquotes.com/,https://bahai-library.com/ .
-                                 In each answerm provide relevant and accurate Baha'i quotes only from these 4 sites listed previously.
-                                 For each quote give URL of the website where you got the quote from as reference."""),
+                                 In each answerm provide relevant and accurate Baha'i quotes only from these 4 sites listed previously."""),
         ],
     )
 
