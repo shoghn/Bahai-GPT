@@ -16,7 +16,7 @@ grounding_tool = types.Tool(
 
 #Define model
 MODEL = "gemini-2.5-flash"
-#chat= client.chats.create(model=MODEL)
+chat= client.chats.create(model=MODEL)
 
 generate_content_config = types.GenerateContentConfig(
         temperature=0,
