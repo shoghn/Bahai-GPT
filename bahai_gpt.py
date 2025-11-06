@@ -65,12 +65,12 @@ if prompt:=st.chat_input("Type your question here"):
     with st.chat_message(name="assistant",avatar=image):
         message_holder=st.empty()
         full_response=""
-        response = st.session_state.chat.send_message_stream(prompt,config=generate_content_config)
-        for chunk in response:
+        with st.session_state.chat.send_message_stream(prompt,config=generate_content_config) as response:#adds response.close() at end automatically
+            for chunk in response:
             #print(chunk.text, end="",flush=True)
-            if chunk.text:
-                flush=True
-                full_response+=chunk.text
-                full_response=full_response.replace("`","&#96;")
-                message_holder.markdown(full_response)#maybe use .markdown() instead
+                if chunk.text:
+                    flush=True
+                    full_response+=chunk.text
+                    full_response=full_response.replace("`","&#96;")
+                    message_holder.markdown(full_response)#maybe use .markdown() instead
     st.session_state.history.append({"role":"assistant","content":full_response})#maybe use .append() instead of +=
