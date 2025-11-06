@@ -5,10 +5,8 @@ from google.genai import types
 import streamlit as st
 
 #Gemini API client configuration
-client = genai.Client(
-        api_key=st.secrets["GEMINI_API_KEY"]
-    )
-
+if "client" not in st.session_state:
+    st.session_state.client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 # Define the grounding tool
 grounding_tool = types.Tool(
     google_search=types.GoogleSearch()
@@ -16,7 +14,7 @@ grounding_tool = types.Tool(
 
 #Define model
 MODEL = "gemini-2.5-flash"
-chat= client.chats.create(model=MODEL)
+
 
 generate_content_config = types.GenerateContentConfig(
         temperature=0,
@@ -44,7 +42,7 @@ st.title("Baha'i-GPT")
 image="https://media.bahai.org/icons/icon-512x512.png?w=1200&h=630&q=70&fit=fillmax&fill=blur&fm=pjpg"
 
 if "chat" not in st.session_state:
-    st.session_state.chat=client.chats.create(model=MODEL)
+    st.session_state.chat=st.session_state.client.chats.create(model=MODEL)
 
 if "history" not in st.session_state:
     st.session_state.history=[]
